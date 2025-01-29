@@ -1,0 +1,1343 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* General Navbar Styling */
+.navbar {
+  background-color:#EFF3F7;
+  color:  rgb(54, 52, 52);
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  z-index: 10;
+}
+
+.navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(54, 52, 52);
+  letter-spacing: 1px;
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease;
+}
+
+.navbar .logo a:hover {
+  color: #FB0469; /* Add a beautiful hover effect */
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px; /* Balanced spacing */
+}
+
+.navbar ul li {
+  position: relative;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 5px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #FB0469; /* Subtle hover color */
+  background-color: rgba(255, 255, 255, 0.1); /* Light background hover */
+}
+
+/* Dropdown Menu Styling */
+.navbar ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color:#EFF3F7;
+  border-radius: 5px;
+  padding: 10px 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+}
+
+.navbar ul li:hover ul {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+.navbar ul li ul li a {
+  display: block;
+  padding: 10px 15px;
+  white-space: nowrap;
+}
+
+.navbar ul li ul li a:hover {
+  /* background-color: #2c3e50; */
+  color: #EA83C0;
+}
+
+/* Mobile Menu (Hamburger Icon) */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  background-color: black;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #2c3e50;
+  padding: 20px;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu li a {
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.mobile-menu li a:hover {
+  color:  #FB0469;
+}
+
+/* Show mobile menu when hamburger is clicked */
+.navbar.active .mobile-menu {
+  display: flex;
+}
+
+.navbar.active .hamburger .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.navbar.active .hamburger .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar.active .hamburger .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Desktop view */
+@media screen and (min-width: 769px) {
+  .navbar ul {
+    display: flex;
+    gap: 20px;
+  }
+
+  .navbar .hamburger {
+    display: none;
+  }
+
+  .navbar.active .mobile-menu {
+    display: none;
+  }
+}
+
+/* Mobile view */
+@media screen and (max-width: 768px) {
+  .navbar ul {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navbar.active ul {
+    display: none;
+  }
+
+  .navbar.active .mobile-menu {
+    display: flex;
+  }
+}
+
+/* Keyframes for Dropdown Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+/* Home page Css................. */
+/* Container with gradient background */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 220px 220px;
+  gap: 1rem;
+  padding: 1rem;
+  background-image: linear-gradient(to right, rgba(0, 64, 110, 0.7), rgba(0, 64, 110, 0.7)), url('wg.png'); 
+  /* Gradient overlay and image (replace 'your-image-path.jpg' with your image path) */
+  background-size: cover; /* Make sure the image covers the entire container */
+  background-position: center; /* Center the image */
+}
+
+/* Child1 styles */
+.child1 {
+  margin: 2rem;
+}
+
+.child1 h1 {
+  color: whitesmoke;
+  font-size: 2rem;
+}
+
+.child1 span {
+  color: #FDF897;
+}
+
+.child1 h3 {
+  color: #CED258;
+  font-weight: lighter;
+}
+
+.child1 ul {
+  color: #FFFFFF;
+}
+
+.child1 button {
+  background-color: #CD3300;
+  color: white;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 0; 
+  width: 100%; 
+  max-width: 300px;
+}
+
+.child1 p {
+  color: white;
+  margin-left: 5rem;
+}
+
+/* Child2 styles */
+.child2 img {
+  width: 100%; 
+  max-width: 610px; 
+  margin-top: 5rem;
+}
+
+/* Responsive Design for small screens */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto; 
+  }
+
+  .child1 {
+    margin: 1rem; 
+  }
+
+  .child1 h1 {
+    font-size: 1.5rem; 
+  }
+
+  .child1 p {
+    margin-left: 0; 
+  }
+
+  .child2 img {
+    margin-top: 2rem; 
+  }
+
+  .child1 button {
+    width: 100%; 
+    margin-left: 0; 
+  }
+}
+
+/* Responsive Design for medium screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto;
+  }
+
+  .child1 {
+    margin: 1.5rem; 
+  }
+
+  .child1 h1 {
+    font-size: 1.8rem; 
+  }
+
+  .child2 img {
+    margin-top: 4rem; 
+  }
+}
+
+
+/* 2nd portion...... */
+ .container1{
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows: 100px 100px;
+  background-color:white;
+  margin-top: 2rem;
+ }
+ .c1child1{
+  /* background-color: #CD3300; */
+  margin-left: 7rem;
+ }
+ .c1child1 p{
+  color: #180421;
+ }
+ .c1child1 h1{
+  color: black;
+ }
+ .c1child1 span{
+  color: #0D70B2;
+ }
+ .c1child2{
+  /* background-color: #EA83C0; */
+  color: #180421;
+  margin-top: 2rem;
+ }
+ .c1child2 p{
+  font-family:'Times New Roman', Times, serif;
+ }
+ 
+ @media (max-width: 768px){
+  .container1{
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto;
+    margin-left: 2rem;
+   }
+  .c1child1{
+    margin-left: 0;
+   }
+  .c1child2{
+    margin-top: 0;
+   }
+ }
+
+ /* portion 3 ................ */
+
+ /* Container for all the boxes */
+.container2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 20px; /* Spacing between the boxes */
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Individual box styling */
+.box {
+  background-color: #f9f9f9;
+  color:black;
+  text-align: center;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect for each box */
+.box:hover {
+  background-color: #0066cc;
+  transform: scale(1.05);
+}
+
+/* Icon styling */
+.icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* Text styling */
+span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container2 {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .container2 {
+    grid-template-columns: 1fr; /* Single column for mobile */
+  }
+
+  .box {
+    padding: 15px;
+  }
+
+  .icon {
+    font-size: 30px;
+  }
+
+  span {
+    font-size: 14px;
+  }
+}
+
+
+
+
+/* Container for the input field and button */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Spacing between input and button */
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Styling for the input field */
+.input-field {
+  width: 500px;
+  padding: 15px;
+  font-size: 16px;
+  border: 2px solid #001352;
+  border-radius: 20px;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #001352;
+  outline: none;
+}
+
+/* Styling for the button */
+.submit-button {
+  padding: 20px 20px;
+  background-color:#001352;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #FF3A8B;
+  transform: scale(1.05);
+}
+
+.submit-button:active {
+  background-color: #FF3A8B;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-container {
+    flex-direction: column; /* Stack input and button vertically */
+    gap: 15px;
+  }
+
+  .input-field {
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .submit-button {
+    width: 50%; /* Full width for button */
+  }
+}
+
+/* portion 4....................... */
+
+/* Container for the tech boxes */
+.tech-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* First row has 4 items */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Styling for each tech box */
+.tech-box {
+  background-color: #00406e;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.tech-box:hover {
+  background-color: #0066cc;
+  transform: scale(1.05);
+}
+
+/* Icon styling */
+.tech-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* Text styling */
+.tech-box span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Second row of 12 divs */
+.tech-container.second-row {
+  grid-template-columns: repeat(6, 1fr); /* 6 items in second row */
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  /* Stack in 2 columns on smaller screens */
+  .tech-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tech-container.second-row {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for second row on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Stack in a single column for very small screens */
+  .tech-container {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-container.second-row {
+    grid-template-columns: 1fr; /* 1 column for second row on mobile */
+  }
+
+  .tech-box {
+    padding: 10px;
+  }
+
+  .tech-icon {
+    font-size: 30px;
+  }
+
+  .tech-box span {
+    font-size: 14px;
+  }
+}
+
+.responsive-container {
+  text-align: center;
+  padding: 1rem;
+}
+
+.responsive-container h1 {
+  color: #343A40;
+  font-family: sans-serif;
+  font-size: 2rem;
+  line-height: 1.5;
+  margin: 1rem auto;
+}
+
+.responsive-container h1 span {
+  color: #0D70B2;
+  font-size: 2.5rem;
+}
+
+.responsive-container p {
+  color: rgb(96, 96, 96);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0.5rem auto;
+}
+
+@media (max-width: 768px) {
+  .responsive-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .responsive-container h1 span {
+    font-size: 2rem;
+  }
+
+  .responsive-container p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .responsive-container h1 {
+    font-size: 1.2rem;
+  }
+
+  .responsive-container h1 span {
+    font-size: 1.5rem;
+  }
+
+  .responsive-container p {
+    font-size: 0.9rem;
+  }
+}
+
+/* portion 5.................... */
+
+/* General container styling */
+/* General container styling */
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns in a row */
+  gap: 20px;
+  padding: 20px;
+  justify-items: center; /* Center items in each grid cell */
+}
+
+/* Individual team boxes */
+.team-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 220px; /* Increased size */
+  height: 220px; /* Increased size */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+}
+
+/* Hover effect */
+.team-box:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon styling */
+.team-icon {
+  font-size: 3rem; /* Large icon */
+  margin-bottom: 10px;
+  color: #333; /* Default icon color */
+}
+
+/* Heading styling */
+.team-box h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Light, distinct background colors for each box */
+.team-box:nth-child(1) {
+  background-color: #f9e7e7; /* Light pink */
+}
+.team-box:nth-child(2) {
+  background-color: #e7f9f3; /* Light teal */
+}
+.team-box:nth-child(3) {
+  background-color: #e7f0f9; /* Light blue */
+}
+.team-box:nth-child(4) {
+  background-color: #f9f4e7; /* Light yellow */
+}
+.team-box:nth-child(5) {
+  background-color: #f3e7f9; /* Light purple */
+}
+.team-box:nth-child(6) {
+  background-color: #e7f9e7; /* Light green */
+}
+
+/* Responsive adjustments for screens smaller than 1024px */
+@media (max-width: 1024px) {
+  .team-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns per row for smaller screens */
+  }
+  
+  .team-box {
+    width: 220px; /* Slightly reduced size */
+    height: 220px;
+  }
+  
+  /* Center the second row divs */
+  .team-box:nth-child(5), .team-box:nth-child(6) {
+    grid-column: span 2; /* These divs will span across two columns */
+  }
+}
+
+/* Mobile adjustments for screens smaller than 768px */
+@media (max-width: 768px) {
+  .team-container {
+    grid-template-columns: 1fr; /* 1 column for mobile screens */
+  }
+
+  .team-box {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* Reset divs in the second row to not span multiple columns */
+  .team-box:nth-child(5), .team-box:nth-child(6) {
+    grid-column: span 1;
+  }
+}
+
+
+/* portion 6.................... */
+
+/* General styles for the convo-div */
+.convo-div {
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px; /* Rounded corners */
+  background: white; /* To ensure text is visible */
+  position: relative;
+  border: 5px solid transparent; /* Create space for the gradient border */
+  background-clip: padding-box; /* Ensure background doesn't cover the border */
+  border-image: linear-gradient(to right, #F79C42, #0D70B2) 1; /* Gradient border */
+}
+
+/* Styling for the h1 and h2 text */
+.convo-div h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.convo-div h2 {
+  font-size: 1.3rem;
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 768px) {
+  .convo-div {
+    padding: 40px; /* Increased padding on larger screens */
+  }
+
+  .convo-div h1 {
+    font-size: 2.5rem; /* Larger font size for h1 */
+  }
+
+  .convo-div h2 {
+    font-size: 1.8rem; /* Larger font size for h2 */
+  }
+}
+
+/* Mobile adjustments for smaller screens */
+@media (max-width: 768px) {
+  .convo-div {
+    padding: 15px; /* Smaller padding on mobile */
+  }
+
+  .convo-div h1 {
+    font-size: 1.8rem; /* Slightly smaller font size for h1 */
+  }
+
+  .convo-div h2 {
+    font-size: 1.2rem; /* Slightly smaller font size for h2 */
+  }
+}
+
+/* portion 7.................. */
+/* Footer Section */
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  background-image: linear-gradient(to right, #F79C42, #0D70B2);
+  color: white;
+  padding: 2rem;
+  border-top: 3px solid #FDF897;
+}
+
+
+.footer-left, .footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.company-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.contact-details p {
+  margin: 0.5rem 0;
+}
+
+.build-btn {
+  background-color: #CD3300;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+}
+
+.build-btn i {
+  margin-right: 0.5rem;
+}
+
+.footer-right {
+  align-items: flex-start;
+}
+
+.office-location h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.social-media {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icon {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #FDF897;
+}
+
+.footer-bottom {
+  grid-column: span 2;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.footer-bottom p {
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #FDF897;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    grid-template-columns: 1fr; /* Stack footer sections vertically */
+    gap: 1rem;
+  }
+
+  .footer-left, .footer-right {
+    align-items: center;
+  }
+
+  .footer-bottom {
+    grid-column: 1;
+  }
+
+  .social-media {
+    justify-content: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links a {
+    margin: 0.5rem 0;
+  }
+}
+
+/* Contact form css................................................................................ */
+  
+.contact-banner {
+  position: relative;
+  background-image: url('contact-banner.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  height: 300px; /* Adjust height as per your design */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.contact-banner h3 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional shadow for readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-banner {
+    height: 200px; /* Reduce height on smaller screens */
+  }
+
+  .contact-banner h3 {
+    font-size: 2rem; /* Adjust font size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-banner {
+    height: 180px; /* Further reduce height on very small screens */
+  }
+
+  .contact-banner h3 {
+    font-size: 1.5rem; /* Adjust font size for very small screens */
+  }
+}
+
+/* portion 2---- */
+.child4 {
+  text-align: center;
+  padding: 3rem;
+}
+
+.child4 h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.child4 h3 {
+  font-size: 1.8rem;
+  font-weight: lighter;
+  margin-bottom: 1rem;
+  color: #333; /* Change to your desired color */
+}
+
+.email-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.email-btn {
+  background-color: #00406E; /* Background color for the button */
+  color: white;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.email-btn span {
+  margin-right: 10px; /* Space between the email and the arrow */
+}
+
+.email-btn:hover {
+  background-color: #e91e63; /* Change to pink on hover */
+}
+
+.email-btn:hover span {
+  color: white; /* Text color change on hover */
+}
+
+.email-btn:hover i {
+  color: white; /* Change arrow icon color on hover */
+}
+
+.arrow-icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.email-btn:hover .arrow-icon {
+  transform: translateX(5px); /* Arrow moves slightly to the right on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .child4 h2 {
+    font-size: 2rem;
+  }
+
+  .child4 h3 {
+    font-size: 1.5rem;
+  }
+
+  .email-container {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .email-btn {
+    width: 80%;
+    font-size: 1rem;
+  }
+}
+
+/* Center the button container */
+.whatsapp-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* WhatsApp Button Styling */
+.whatsapp-btn {
+  background-color: #25D366; /* WhatsApp Green */
+  color: white;
+  font-size: 18px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* WhatsApp Icon */
+.whatsapp-btn i {
+  font-size: 22px;
+}
+
+/* Hover Effect */
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .whatsapp-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  
+  .whatsapp-btn i {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsapp-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+  
+  .whatsapp-btn i {
+    font-size: 18px;
+  }
+}
+
+
+/* portion 3------- */
+
+.child5 {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 1rem;
+  padding: 2rem;
+  max-height: 500px; /* Set the max height for the section */
+  overflow: hidden; /* Hide overflow content */
+  height: 500px;
+}
+
+.form-container {
+  background-color: #262D34; /* Form Background */
+  padding: 1rem;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute content evenly */
+  height: 100%;
+  position: relative;
+  overflow-y: auto; /* Scroll if content exceeds */
+}
+
+.form-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 8px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #ccc; /* Underline style */
+  color: white;
+  font-size: 1rem;
+}
+
+.input-wrapper input:focus {
+  outline: none;
+  border-bottom: 2px solid #FF6A13; /* Highlight underline on focus */
+}
+
+.input-wrapper .input-icon {
+  position: absolute;
+  top: 6px;
+  left: -20px;
+  color: #ccc;
+  font-size: 1.2rem;
+}
+
+.contact-btn {
+  background-color: #FF6A13; /* Orange Button */
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+  width: 100%;
+}
+
+.contact-btn:hover {
+  background-color: #e15c06; /* Darker Orange on Hover */
+}
+
+.testimonial {
+  background-color: #117EB1; /* Testimonial Background */
+  color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
+}
+
+.quote-icon {
+  font-size: 13rem;
+  position: absolute;
+  top: -25px;
+  color: white;
+}
+
+.testimonial p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: justify;
+  font-style: italic;
+  margin-top: 9rem;
+}
+
+@media (max-width: 768px) {
+  .child5 {
+    grid-template-columns: 1fr; /* Stack the sections on smaller screens */
+  }
+
+  .form-container,
+  .testimonial {
+    width: 100%;
+    height: auto; /* Allow the sections to expand on small screens */
+  }
+
+  .form-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .input-group label {
+    font-size: 0.9rem;
+  }
+
+  .contact-btn {
+    font-size: 1rem;
+  }
+}
+
+
+/* portion 4------- */
+
+.contact-container {
+  max-width: 500px;
+  margin: auto;
+  padding: 2rem;
+  background: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+
+
+.info-text {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  height: 100px;
+  resize: none;
+}
+
+.file-label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #00406E;
+  display: block;
+  margin-top: 1rem;
+}
+
+.file-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f9f9f9;
+}
+
+.submit-btn {
+  background-color: #CD3300;
+  color: white;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.submit-btn:hover {
+  background-color: #a02800;
+}
+
+.uploaded-file {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #00406E;
+  font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .contact-container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+  }
+
+  .submit-btn {
+    font-size: 0.9rem;
+  }
+}
