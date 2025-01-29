@@ -42,11 +42,10 @@ const ContactForm = () => {
 
     try {
       // Send data to the backend API
-      const response = await axios.post("/api/sendContactForm", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+      const response = await axios.post(
+        "http://localhost:5000/api/sendContactForm",
+        formData
+      );
 
       if (response.data.success) {
         toast.success("Message sent successfully!", {
@@ -85,9 +84,9 @@ const ContactForm = () => {
       </div>
 
       <div className="whatsapp-container">
-        <button 
-          className="whatsapp-btn" 
-          onClick={() => window.open('https://wa.me/3340545803', '_blank')}
+        <button
+          className="whatsapp-btn"
+          onClick={() => window.open("https://wa.me/3340545803", "_blank")}
         >
           <i className="fab fa-whatsapp"></i> Chat via WhatsApp
         </button>
@@ -100,21 +99,27 @@ const ContactForm = () => {
             <div className="input-group">
               <label htmlFor="name">Name</label>
               <div className="input-wrapper">
-                <input type="text" id="name" name="name" placeholder="Your Name" required />
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                />
                 <FaUser className="input-icon" />
               </div>
             </div>
             <div className="input-group">
               <label htmlFor="email">Email</label>
               <div className="input-wrapper">
-                <input 
-                  type="email" 
-                  id="email" 
-                  name="email" 
-                  placeholder="Your Email" 
-                  required 
-                  value={email} 
-                  onChange={handleEmailChange} 
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                  value={email}
+                  onChange={handleEmailChange}
                 />
                 <FaEnvelope className="input-icon" />
               </div>
@@ -122,50 +127,78 @@ const ContactForm = () => {
             <div className="input-group">
               <label htmlFor="phone">Phone</label>
               <div className="input-wrapper">
-                <input type="tel" id="phone" name="phone" placeholder="Your Phone" required />
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="Your Phone"
+                  required
+                />
                 <FaPhone className="input-icon" />
               </div>
             </div>
             <div className="input-group">
               <label htmlFor="details">Details</label>
               <div className="input-wrapper">
-                <input type="text" id="details" name="details" placeholder="Project Details" required />
+                <input
+                  type="text"
+                  id="details"
+                  name="details"
+                  placeholder="Project Details"
+                  required
+                />
                 <FaPencilAlt className="input-icon" />
               </div>
             </div>
-            <button type="submit" className="contact-btn">Get in Touch</button>
+            <button type="submit" className="contact-btn">
+              Get in Touch
+            </button>
           </form>
         </div>
 
         <div className="testimonial">
           <div className="quote-icon">“</div>
           <p>
-            EXCELLENT DESIGN, TRUSTWORTHY & RESPONSIVE STAFF. First...I must say how confused I am by some previous negative reviews and suspect they reference a different company with a similar name because Ivan Infotech has truly exceeded my expectations. I cannot emphasize enough how impressed I am with the outstanding work delivered by their team. Were an absolute pleasure to work and kindness in guiding me through the process was truly appreciated.
+            EXCELLENT DESIGN, TRUSTWORTHY & RESPONSIVE STAFF. First...I must say
+            how confused I am by some previous negative reviews and suspect they
+            reference a different company with a similar name because Ivan
+            Infotech has truly exceeded my expectations. I cannot emphasize
+            enough how impressed I am with the outstanding work delivered by
+            their team. Were an absolute pleasure to work and kindness in
+            guiding me through the process was truly appreciated.
           </p>
         </div>
       </div>
 
       <div className="contact-container">
         <p className="info-text">
-          Attach relevant documents (e.g., resume, project files, or images) for better assistance.
+          Attach relevant documents (e.g., resume, project files, or images) for
+          better assistance.
         </p>
         <form className="contact-form" onSubmit={handleSubmit}>
           <input type="text" placeholder="Your Name" required />
-          <input 
-            type="email" 
-            placeholder="Your Email" 
-            required 
-            value={email} 
-            onChange={handleEmailChange} 
+          <input
+            type="email"
+            placeholder="Your Email"
+            required
+            value={email}
+            onChange={handleEmailChange}
           />
           <textarea placeholder="Your Message" required></textarea>
-          
+
           <label htmlFor="file-upload" className="file-label">
             Upload File (PDF, Image, etc.)
           </label>
-          <input type="file" id="file-upload" className="file-input" onChange={handleFileChange} />
-          
-          <button type="submit" className="submit-btn">Send Message</button>
+          <input
+            type="file"
+            id="file-upload"
+            className="file-input"
+            onChange={handleFileChange}
+          />
+
+          <button type="submit" className="submit-btn">
+            Send Message
+          </button>
         </form>
 
         {file && <p className="uploaded-file">File: {file.name}</p>}
