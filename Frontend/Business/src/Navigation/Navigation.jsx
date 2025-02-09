@@ -11,7 +11,8 @@ const Navigation = () => {
     <nav className={`navbar ${menuOpen ? 'active' : ''}`}>
       {/* Logo */}
       <div className="logo">
-        <Link to="/Home">Business Project</Link>
+     
+        <Link to="/Home">CraftHive Solutions</Link>
       </div>
 
       {/* Desktop and Mobile Menu */}
@@ -26,14 +27,14 @@ const Navigation = () => {
         </li>
         <li><Link to="/services">Services</Link>
         <ul className="dropdown">
-            <li><Link to="/3DAnimation"> 3DAnimation </Link></li>
+            <li><Link to="/ThreeDAnimation"> 3DAnimation </Link></li>
             <li><Link to="/ContentWriting"> ContentWriting</Link></li>
             <li><Link to="/WebsiteSolutions"> WebsiteSolutions</Link></li>
           </ul>
         </li>
         <li><Link to="/portfolio">Portfolio</Link></li>
-        <li><Link to="/about-us">About Us</Link></li>
-        <li><Link to="/ContactForm">Contact Us</Link></li>
+        <li><Link to="/About">About Us</Link></li>
+        <li><Link to="/ContactForm" className='connect-btn'>Contact Us </Link></li>
         {/* <li><Link to="/blog">Blog</Link></li> */}
       </ul>
 

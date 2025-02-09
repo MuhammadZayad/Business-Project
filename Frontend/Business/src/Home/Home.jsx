@@ -20,9 +20,15 @@ import { HiOutlineDesktopComputer } from "react-icons/hi";
 import { RiReservedFill } from "react-icons/ri";
 import { RiShakeHandsLine } from "react-icons/ri";
 import { MdOutlineVerticalAlignTop } from "react-icons/md";
+import { useNavigate } from 'react-router-dom';
+import Footer from './Footer';
 
 
 const Home = () => {
+  const navigate = useNavigate();
+    const handleClick = () => {
+        navigate('/ContactForm'); // Redirect to the contact page when button is clicked
+      };
   return (
     <>
      <div className='container'>
@@ -34,7 +40,7 @@ const Home = () => {
       <h4><TiTickOutline />ISO 9001 & 2015 certified</h4>
       <h4><TiTickOutline />200+ Professional Developers</h4>
     </ul>
-    <button>Lets Build Together</button>
+    <button style={{cursor:"pointer"}} onClick={handleClick}>Lets Build Together</button>
     <p><TiTickOutline />100% confidential</p>
   </div>
   <div className='child2'>
@@ -91,14 +97,14 @@ const Home = () => {
         <span>QA</span>
       </div>
     </div>
-    <div className="form-container">
+    <div style={{backgroundColor:"white"}} className="form-container">
       <input
         type="text"
         placeholder="Need custom enterprise software development ? "
         className="input-field"
         
       />
-      <button className="submit-button">Send a Request Now</button>
+      <button onClick={handleClick} className="submit-button">Send a Request Now</button>
       {/* portion 4.................. */}
     </div>
     <div style={{ textAlign: "center", padding: "1rem" }}>
@@ -238,64 +244,9 @@ const Home = () => {
 
 
   
-    <div className='convo-div'>
-      <h1>LET'S CREATE <span style={{color:"#0D70B2", fontSize:"2.3rem"}}>SOMETHING PHENOMENAL</span></h1>
-      <h2> <span style={{color:"#2ABCB0", fontSize:"1.5rem"}}>IT ALL STARTS WITH A </span> CONVERSATION</h2>
-      </div>
-    
     {/* portion 7.............last */}
-    <footer className="footer">
-      <div className="footer-left">
-        <div className="logo-section">
-          <img src="logo.png" alt="Logo" className="logo" />
-          <h3 className="company-name">Ivan Infotech Pvt. Ltd.</h3>
-        </div>
-        <div className="contact-details">
-          <p>Address: 123 Main St, Some City, Some Country</p>
-          <p>Email: contact@ivaninfotech.com</p>
-          <p>Phone: +123 456 7890</p>
-        </div>
-        <button className="build-btn">
-          <i className="fas fa-handshake"></i> Lets Build Together
-        </button>
-      </div>
-
-      <div className="footer-right">
-        <div className="office-location">
-          <h4>Our Office</h4>
-          <p>1234 Business Rd, Suite 500, Some City, Some Country</p>
-        </div>
-        <div className="social-media">
-          <Link to="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-            <i className="fab fa-facebook-f"></i>
-          </Link>
-          <Link to="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-            <i className="fab fa-twitter"></i>
-          </Link>
-          <Link to="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-            <i className="fab fa-linkedin-in"></i>
-          </Link>
-          <Link to="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-            <i className="fab fa-instagram"></i>
-          </Link>
-        </div>
-      </div>
-
-      <div className="footer-bottom">
-        <p>&copy; 2016 - 2024 Ivan Infotech Pvt. Ltd. All Rights Reserved</p>
-        <div className="footer-links">
-          <Link to="/blog">Blog</Link>
-          <Link to="/faq">FAQ</Link>
-          <Link to="/privacy-policy">Privacy Policy</Link>
-          <Link to="/terms-conditions">Terms and Conditions</Link>
-          <Link to="/disclaimer">Disclaimer</Link>
-          <Link to="/user-agreement">User Agreement</Link>
-          <Link to="/cancellation-refund">Cancellation and Refund Policy</Link>
-          <Link to="/delivery-guidelines">Delivery Guidelines</Link>
-        </div>
-      </div>
-    </footer>
-
+    <Footer/>
+    
     </>
   )
 }

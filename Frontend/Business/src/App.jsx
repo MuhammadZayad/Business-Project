@@ -10,6 +10,12 @@ import ContactForm from './Contact us/ContactForm';
 import Home from "./Home/Home";
 import './index.css'
 import Footer from "./Home/Footer";
+import About from './About us/About'
+import SeparateComp from "./Home/SeparateComp";
+import ThreeDAnimation from "./Services/ThreeDAnimation";
+import ContentWriting from "./Services/ContentWriting";
+import WebsiteSolutions from "./Services/WebsiteSolutions";
+
 
 
 
@@ -29,9 +35,9 @@ useEffect(() => {
       <Routes>
         Define your routes here
         {/* <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />} />
+        
         <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/about-us" element={<AboutUs />} />
+      
         <Route path="/blog" element={<Blog />} /> */}
          <Route path="/ValueProposition" element={<ValueProposition />} />
         <Route path="/CompanyOverview" element={<CompanyOverview />} />
@@ -39,6 +45,12 @@ useEffect(() => {
         <Route path="/ContactForm" element={<ContactForm />} />
         <Route path="/Home" element={<Home/>} />
         <Route path="/Footer" element={<Footer/>} />
+        <Route path="/About" element={<About/>} />
+        <Route path="/SeparateComp" element={<SeparateComp/>} />
+        <Route path="/ThreeDAnimation" element={<ThreeDAnimation />} />
+        <Route path="/ContentWriting" element={<ContentWriting />} />
+        <Route path="/WebsiteSolutions" element={<WebsiteSolutions />} />
+     
       </Routes>
     </Router>
   );

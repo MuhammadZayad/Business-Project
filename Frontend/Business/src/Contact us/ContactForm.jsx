@@ -3,7 +3,7 @@ import { FaUser, FaEnvelope, FaPhone, FaPencilAlt } from "react-icons/fa";
 import Footer from "../Home/Footer";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import axios from "axios"; // Import axios for making requests
+import axios from "axios"; 
 
 const ContactForm = () => {
   const [file, setFile] = useState(null);

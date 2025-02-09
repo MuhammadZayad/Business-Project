@@ -1,12 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 const Footer = () => {
+  const navigate = useNavigate();
+    const handleClick = () => {
+      console.log("Button Clicked!");
+        navigate('/ContactForm'); // Redirect to the contact page when button is clicked
+      };
   return (
     <>
       
   
     <div className='convo-div'>
-      <h1>LET'S CREATE <span style={{color:"#0D70B2", fontSize:"2.3rem"}}>SOMETHING PHENOMENAL</span></h1>
+      <h1>LETS CREATE <span style={{color:"#0D70B2", fontSize:"2.3rem"}}>SOMETHING PHENOMENAL</span></h1>
       <h2> <span style={{color:"#2ABCB0", fontSize:"1.5rem"}}>IT ALL STARTS WITH A </span> CONVERSATION</h2>
       </div>
     
@@ -15,18 +21,20 @@ const Footer = () => {
       <div className="footer-left">
         <div className="logo-section">
           <img src="logo.png" alt="Logo" className="logo" />
-          <h3 className="company-name">Ivan Infotech Pvt. Ltd.</h3>
+          <h3 className="company-name">CraftHive Solutions</h3>
         </div>
         <div className="contact-details">
           <p>Address: 123 Main St, Some City, Some Country</p>
           <p>Email: contact@ivaninfotech.com</p>
           <p>Phone: +123 456 7890</p>
         </div>
-        <button className="build-btn">
+      
+        <button onClick={handleClick} className="build-btn">
           <i className="fas fa-handshake"></i> Lets Build Together
-        </button>
+         </button>
+         
       </div>
-
+    
       <div className="footer-right">
         <div className="office-location">
           <h4>Our Office</h4>
@@ -58,7 +66,7 @@ const Footer = () => {
           <Link to="/disclaimer">Disclaimer</Link>
           <Link to="/user-agreement">User Agreement</Link>
           <Link to="/cancellation-refund">Cancellation and Refund Policy</Link>
-          <Link to="/delivery-guidelines">Delivery Guidelines</Link>
+          <Link to="/ContactForm">Contact Us</Link>
         </div>
       </div>
     </footer>
