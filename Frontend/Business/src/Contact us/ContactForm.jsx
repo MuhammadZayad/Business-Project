@@ -69,8 +69,13 @@ const ContactForm = () => {
   return (
     <>
       <div className="contact-banner">
-        <h3>Contact Us</h3>
+        {/* <h3>Contact Us</h3> */}
       </div>
+
+      {/* New div added after contact-banner */}
+      <div className="background-container">
+        {/* This div can be used to add a background image */}
+     
 
       <div className="child4">
         <h2>Let’s Work Together</h2>
@@ -156,9 +161,9 @@ const ContactForm = () => {
           </form>
         </div>
 
-        <div className="testimonial">
+        <div  className="testimonial-card">
           <div className="quote-icon">“</div>
-          <p>
+          <p className="paragraph">
             EXCELLENT DESIGN, TRUSTWORTHY & RESPONSIVE STAFF. First...I must say
             how confused I am by some previous negative reviews and suspect they
             reference a different company with a similar name because Ivan
@@ -202,9 +207,10 @@ const ContactForm = () => {
         </form>
 
         {file && <p className="uploaded-file">File: {file.name}</p>}
-
+        </div>
         <ToastContainer />
       </div>
+      
 
       <Footer />
     </>

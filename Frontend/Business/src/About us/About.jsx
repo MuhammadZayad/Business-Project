@@ -26,7 +26,7 @@ const About = () => {
 
       {/* Content Section with Two Columns */}
       <div className="content-container">
-        <div className="left-content">
+        <div className="left-content"data-aos="fade-up" data-aos-duration="1000">
           <p>
             Ivan is a family of professionals formed with passionate and dedicated 
             thoughts, dreams, and determination. When there’s a will, there’s a way – 
@@ -38,7 +38,7 @@ const About = () => {
             in shaping up Ivan.
           </p>
         </div>
-        <div className="right-content">
+        <div className="right-content"data-aos="fade-up" data-aos-duration="1000">
           <p>
             Our dream was to pump up global and national businesses with the rare combination 
             of expert strategies, ultimate IT solutions, creative designs, and development solutions, 

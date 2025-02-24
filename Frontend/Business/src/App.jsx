@@ -15,7 +15,8 @@ import SeparateComp from "./Home/SeparateComp";
 import ThreeDAnimation from "./Services/ThreeDAnimation";
 import ContentWriting from "./Services/ContentWriting";
 import WebsiteSolutions from "./Services/WebsiteSolutions";
-
+import Portfolio from "./Portfolio/Portfolio";
+import { AnimatePresence } from 'framer-motion';
 
 
 
@@ -31,12 +32,13 @@ useEffect(() => {
 }, []);
   return (
     <Router>
+        <AnimatePresence>
       <Navigation />
       <Routes>
         Define your routes here
         {/* <Route path="/" element={<Home />} />
         
-        <Route path="/portfolio" element={<Portfolio />} />
+       
       
         <Route path="/blog" element={<Blog />} /> */}
          <Route path="/ValueProposition" element={<ValueProposition />} />
@@ -50,8 +52,10 @@ useEffect(() => {
         <Route path="/ThreeDAnimation" element={<ThreeDAnimation />} />
         <Route path="/ContentWriting" element={<ContentWriting />} />
         <Route path="/WebsiteSolutions" element={<WebsiteSolutions />} />
+        <Route path="/Portfolio" element={<Portfolio />} />
      
       </Routes>
+      </AnimatePresence>
     </Router>
   );
 };

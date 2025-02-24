@@ -63,7 +63,7 @@ const SeparateComp = () => {
         <span>QA</span>
       </div>
     </div>
-    <div style={{backgroundColor:"white"}} className="form-container">
+    {/* <div style={{backgroundColor:"white"}} className="form-container">
       <input
         type="text"
         placeholder="Need custom enterprise software development ? "
@@ -71,7 +71,7 @@ const SeparateComp = () => {
         
       />
       <button onClick={handleClick} className="submit-button">Send a Request Now</button>
-      </div>
+      </div> */}
       {/* portion 5....................... */}
  <div className="team-container">
   <div className="team-box" data-aos="flip-left" data-aos-duration="1000">

@@ -18,8 +18,9 @@ const ThreeDAnimation = () => {
   return (
     <>
     <div className='ThreeD-one'>
-    <h1>Custom <span style={{color:"#FDF897",fontSize:"2.4rem"}}> mobile application </span> development services<br/> for better output.</h1>
-     <p>By availing custom mobile app development of CraftHive Solutions, companies can automate workflows and modernize legacy systems.</p>
+    <h1>Custom <span style={{color:"#FDF897",fontSize:"2.4rem"}}> 3d animation </span>  services<br/> for for Engaging and Immersive Visuals.</h1>
+     <p>By leveraging CraftHive Solutions' custom 3D animation services, companies can enhance visual storytelling and create immersive digital experiences.
+</p>
      
     <ul>
       <h3><TiTickOutline />Hire top 1% development talent</h3>
@@ -33,32 +34,32 @@ const ThreeDAnimation = () => {
 
 
     <div className="animation-wrapper">
-      <h2 className="title">CraftHive Solutions Delivers Custom 3D Animation Services</h2>
-      <p className="subtitle">
+      <h2 className="title"data-aos="fade-up" data-aos-duration="1000">CraftHive Solutions Delivers Custom 3D Animation Services</h2>
+      <p className="subtitle"data-aos="fade-up" data-aos-duration="1000">
       CraftHive Solutions provides top-notch 3D animation services. Our experienced animators craft stunning visuals, realistic motion graphics, and engaging animations for various industries, ensuring impactful storytelling and high-quality outputs.
       </p>
       
       <div className="grid-container">
-        <div className="text-content">
+        <div className="text-content"data-aos="fade-up" data-aos-duration="1000">
           <p>
-            <strong style={{color:"#263F6E", fontSize:"1.8rem"}}>Character Animation</strong>
+            <strong style={{color:"white", fontSize:"1.8rem"}}>Character Animation</strong>
             <br />
             Our animators bring characters to life with fluid movements, realistic expressions, and engaging storytelling, ensuring an immersive viewer experience.
           </p>
           <p>
-            <strong style={{color:"#263F6E", fontSize:"1.8rem"}} >Product Visualization</strong>
+            <strong style={{color:"white", fontSize:"1.8rem"}} >Product Visualization</strong>
             <br />
             Showcase your products with high-definition 3D animations, enabling clients to visualize every angle, function, and feature before production.
           </p>
           <p>
-            <strong style={{color:"#263F6E", fontSize:"1.8rem"}}>Architectural Animation</strong>
+            <strong style={{color:"white", fontSize:"1.8rem"}}>Architectural Animation</strong>
             <br />
             Our 3D architectural animations present realistic property walkthroughs, allowing real estate professionals and architects to display designs effectively.
           </p>
         </div>
         
-        <div className="image-content">
-          <img src="animationimg.jpg" alt="3D Animation" className="responsive-img" />
+        <div className="image-content"data-aos="fade-up" data-aos-duration="1000">
+          <img src="Animation3.jpg" alt="3D Animation" className="responsive-img" />
         </div>
       </div>
     </div>
@@ -71,7 +72,7 @@ const ThreeDAnimation = () => {
 
       <div className="threeD-solutions-grid">
         {/* 3D Motion Graphics */}
-        <div className="threeD-solution-box">
+        <div className="threeD-solution-box"data-aos="fade-in" data-aos-duration="1000">
           <FaFilm className="threeD-solution-icon" />
           <h4 style={{fontSize:"1.3rem"}}>3D Motion Graphics</h4>
           <p>
@@ -80,7 +81,7 @@ const ThreeDAnimation = () => {
         </div>
 
         {/* Product Animation */}
-        <div className="threeD-solution-box">
+        <div className="threeD-solution-box"data-aos="fade-in" data-aos-duration="1000">
           <FaCubes className="threeD-solution-icon" />
           <h4 style={{fontSize:"1.3rem"}}>Product Animation</h4>
           <p>
@@ -89,7 +90,7 @@ const ThreeDAnimation = () => {
         </div>
 
         {/* Architectural Visualization */}
-        <div className="threeD-solution-box">
+        <div className="threeD-solution-box"data-aos="fade-in" data-aos-duration="1000">
           <FaBuilding className="threeD-solution-icon" />
           <h4 style={{fontSize:"1.3rem"}}>Architectural Visualization</h4>
           <p>
@@ -136,10 +137,10 @@ const ThreeDAnimation = () => {
 
       <div className="why-choose-container">
       <h1 className="why-choose-title">
-        Why Choose Ivan Infotech for 3D Animation Services?
+        Why Choose CraftHive Solutions for 3D Animation Services?
       </h1>
       <p className="why-choose-description">
-        By choosing Ivan Infotech, you ensure high-quality, cutting-edge 3D animation solutions that enhance storytelling, marketing, and product visualization.
+        By choosing CraftHive Solutions, you ensure high-quality, cutting-edge 3D animation solutions that enhance storytelling, marketing, and product visualization.
       </p>
 
       <div className="why-choose-grid">
@@ -147,7 +148,7 @@ const ThreeDAnimation = () => {
           <FaTools className="why-choose-icon" />
           <h4>Expertise and Experience</h4>
           <p>
-            Ivan Infotech has a strong track record in delivering high-quality 3D animations for various industries. Our skilled team consists of experienced animators and designers who are well-versed in the latest technologies.
+            CraftHive Solutions has a strong track record in delivering high-quality 3D animations for various industries. Our skilled team consists of experienced animators and designers who are well-versed in the latest technologies.
           </p>
         </div>
 

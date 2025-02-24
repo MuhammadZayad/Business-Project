@@ -43,9 +43,9 @@ const Home = () => {
     <button style={{cursor:"pointer"}} onClick={handleClick}>Lets Build Together</button>
     <p><TiTickOutline />100% confidential</p>
   </div>
-  <div className='child2'>
+  {/* <div className='child2'>
     <img src="wg.png" alt="home img" />
-  </div>
+  </div> */}
 </div>
 
 
@@ -53,7 +53,7 @@ const Home = () => {
         <div className='container1'>
           <div className='c1child1'>
             <p>What we are Offering</p>
-            <h1>Services Built Specifically <br/>for your <span style={{fontSize: "30px", fontWeight:'bold'}}>Business</span></h1>
+            <h1>Services Built Specifically <br/>for your <span style={{fontSize: "35px", fontWeight:'bolder'}}>Business</span></h1>
 
           </div>
        
@@ -97,7 +97,7 @@ const Home = () => {
         <span>QA</span>
       </div>
     </div>
-    <div style={{backgroundColor:"white"}} className="form-container">
+    <div  className="form-container1">
       <input
         type="text"
         placeholder="Need custom enterprise software development ? "
@@ -105,20 +105,24 @@ const Home = () => {
         
       />
       <button onClick={handleClick} className="submit-button">Send a Request Now</button>
+      </div>
       {/* portion 4.................. */}
-    </div>
-    <div style={{ textAlign: "center", padding: "1rem" }}>
+    
+    <div style={{ textAlign: "center", padding: "1rem", backgroundColor : "#1A1C1B"
+       }}>
   <h1
     style={{
       margin: "1rem auto",
-      color: "#343A40",
+      color: "white",
       fontFamily: "sans-serif",
       fontSize: "2rem",
       lineHeight: "1.5",
+    
+      
     }}
   >
     Design. Develop. Maintain. Scale. Your{" "}
-    <span style={{ color: "#0D70B2", fontSize: "2.5rem" }}>
+    <span style={{ color: "rgba(223, 13, 13, 0.836)", fontSize: "2.4rem",fontWeight:"bolder" }}>
       Full-Stack Development
     </span>
     <br />
@@ -128,7 +132,7 @@ const Home = () => {
   </h1>
   <p
     style={{
-      color: "rgb(96,96,96)",
+      color: "white",
       fontSize: "1.1rem",
       maxWidth: "600px",
       margin: "0.5rem auto",
@@ -154,7 +158,7 @@ const Home = () => {
   </div>
   <div className="tech-box"  data-aos="flip-left" data-aos-duration="1000">
     <FaAndroid className="tech-icon" />
-    <span>Ionic</span>
+    <span>Express JS</span>
   </div>
 
   {/* Second Row - 12 divs */}
@@ -196,7 +200,7 @@ const Home = () => {
   </div>
   <div className="tech-box" data-aos="flip-left" data-aos-duration="1000">
     <FaMagento className="tech-icon" />
-    <span>Magento</span>
+    <span>Mongo DB</span>
   </div>
   <div className="tech-box" data-aos="flip-left" data-aos-duration="1000"> 
     <FaShopify className="tech-icon" />
@@ -212,35 +216,35 @@ const Home = () => {
   <div className="team-box" data-aos="flip-left" data-aos-duration="1000">
     <MdOutlineRocket className="team-icon" />
     <h2>8+</h2>
-    <div style={{ fontSize: '1rem', color: '#555' }}>Years Experience</div>
+    <div style={{ fontSize: '1rem', color: 'white' }}>Years Experience</div>
   </div>
   <div className="team-box" data-aos="flip-left" data-aos-duration="1000">
     <GiDarkSquad className="team-icon" />
     <h2>120+</h2>
-    <div style={{ fontSize: '1rem', color: '#555' }}>Talented Squad</div>
+    <div style={{ fontSize: '1rem', color: 'white' }}>Talented Squad</div>
   </div>
   <div className="team-box" data-aos="flip-left" data-aos-duration="1000">
     <HiOutlineDesktopComputer className="team-icon" />
     <h2>500+</h2>
-    <div style={{ fontSize: '1rem', color: '#555' }}>Projects Delivered</div>
+    <div style={{ fontSize: '1rem', color: 'white' }}>Projects Delivered</div>
   </div>
   <div className="team-box" data-aos="flip-left" data-aos-duration="1000">
     <RiReservedFill className="team-icon" />
     <h2>40+</h2>
-    <div style={{ fontSize: '1rem', color: '#555' }}>Countries Served</div>
+    <div style={{ fontSize: '1rem', color: 'white' }}>Countries Served</div>
   </div>
   <div className="team-box" data-aos="flip-left" data-aos-duration="1000">
     <RiShakeHandsLine className="team-icon" />
     <h2>99%</h2>
-    <div style={{ fontSize: '1rem', color: '#555' }}>Client Satisfaction</div>
+    <div style={{ fontSize: '1rem', color: 'white' }}>Client Satisfaction</div>
   </div>
   <div className="team-box" data-aos="flip-left" data-aos-duration="1000">
     <MdOutlineVerticalAlignTop className="team-icon" />
     <h2>Top</h2>
-    <div style={{ fontSize: '1rem', color: '#555' }}>Top Rating</div>
+    <div style={{ fontSize: '1rem', color: 'white' }}>Top Rating</div>
   </div>
 </div>
-{/* portion 6........................ */}
+
 
 
   

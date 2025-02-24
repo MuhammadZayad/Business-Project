@@ -1,79 +1,77 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaHandshake } from "react-icons/fa";
+
 const Footer = () => {
   const navigate = useNavigate();
-    const handleClick = () => {
-      console.log("Button Clicked!");
-        navigate('/ContactForm'); // Redirect to the contact page when button is clicked
-      };
+
+  const handleClick = () => {
+    console.log("Button Clicked!");
+    navigate('/ContactForm'); // Redirect to the contact page when button is clicked
+  };
+
   return (
     <>
-      
-  
-    <div className='convo-div'>
-      <h1>LETS CREATE <span style={{color:"#0D70B2", fontSize:"2.3rem"}}>SOMETHING PHENOMENAL</span></h1>
-      <h2> <span style={{color:"#2ABCB0", fontSize:"1.5rem"}}>IT ALL STARTS WITH A </span> CONVERSATION</h2>
-      </div>
-    
-    {/* portion 7.............last */}
-    <footer className="footer">
-      <div className="footer-left">
-        <div className="logo-section">
-          <img src="logo.png" alt="Logo" className="logo" />
-          <h3 className="company-name">CraftHive Solutions</h3>
-        </div>
-        <div className="contact-details">
-          <p>Address: 123 Main St, Some City, Some Country</p>
-          <p>Email: contact@ivaninfotech.com</p>
-          <p>Phone: +123 456 7890</p>
-        </div>
-      
-        <button onClick={handleClick} className="build-btn">
-          <i className="fas fa-handshake"></i> Lets Build Together
-         </button>
-         
-      </div>
-    
-      <div className="footer-right">
-        <div className="office-location">
-          <h4>Our Office</h4>
-          <p>1234 Business Rd, Suite 500, Some City, Some Country</p>
-        </div>
-        <div className="social-media">
-          <Link to="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-            <i className="fab fa-facebook-f"></i>
-          </Link>
-          <Link to="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-            <i className="fab fa-twitter"></i>
-          </Link>
-          <Link to="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-            <i className="fab fa-linkedin-in"></i>
-          </Link>
-          <Link to="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-            <i className="fab fa-instagram"></i>
-          </Link>
-        </div>
+      <div className='convo-div'>
+        <h1>LET'S CREATE <span className="highlight-text">SOMETHING PHENOMENAL</span></h1>
+        <h2><span className="sub-highlight">IT ALL STARTS WITH A</span> CONVERSATION</h2>
       </div>
 
-      <div className="footer-bottom">
-        <p>&copy; 2016 - 2024 Ivan Infotech Pvt. Ltd. All Rights Reserved</p>
+      {/* Footer Section */}
+      <footer className="footer">
+        {/* Left Section */}
+        <div className="footer-left">
+          <div className="logo-section">
+            <img src="Company Logo.webp" alt="Logo" className="logo" />
+            <h3 className="company-name">CraftHive Solutions</h3>
+          </div>
+          <div className="contact-details">
+            <p>📍 InnoVista Rawal DHA Avanue Mall, DHA 1 Rawalpindi</p>
+            <p>📧 Email: uzair332@gmail.com</p>
+            <p>📞 Phone: +92 334 0545803</p>
+          </div>
+          <button onClick={handleClick} className="build-btn">
+            <FaHandshake className="icon" /> Let's Build Together
+          </button>
+        </div>
+
+        {/* Right Section */}
+        <div className="footer-right">
+          <div className="office-location">
+            <h4>Our Office</h4>
+            <p> InnoVista Rawal DHA Avanue Mall, DHA 1 Rawalpindi</p>
+          </div>
+          <div className="social-media">
+            <Link to="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <FaFacebookF />
+            </Link>
+            
+            <Link to="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <FaLinkedinIn />
+            </Link>
+            <Link to="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <FaInstagram />
+            </Link>
+          </div>
+        </div>
+      </footer>
+
+      {/* Bottom Section */}
+      {/* <div className="footer-bottom">
+        <p>&copy; CraftHive Solutions Pvt. Ltd. All Rights Reserved</p>
         <div className="footer-links">
-          {/* <Link to="/blog">Blog</Link> */}
           <Link to="/faq">FAQ</Link>
           <Link to="/privacy-policy">Privacy Policy</Link>
           <Link to="/terms-conditions">Terms and Conditions</Link>
           <Link to="/disclaimer">Disclaimer</Link>
           <Link to="/user-agreement">User Agreement</Link>
-          <Link to="/cancellation-refund">Cancellation and Refund Policy</Link>
+          <Link to="/cancellation-refund">Cancellation & Refund Policy</Link>
           <Link to="/ContactForm">Contact Us</Link>
         </div>
-      </div>
-    </footer>
-
-
+      </div> */}
     </>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

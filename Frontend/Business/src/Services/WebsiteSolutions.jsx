@@ -33,31 +33,31 @@ const WebsiteSolutions = () => {
 
     
     <div className="animation-wrapper">
-      <h2 className="title"> CraftHive Solutions provides exceptional website solutions</h2>
-      <p className="subtitle">
+      <h2 className="title"data-aos="fade-up" data-aos-duration="1000"> CraftHive Solutions provides exceptional website solutions</h2>
+      <p className="subtitle"data-aos="fade-up" data-aos-duration="1000">
       Our expert team offers a wide range of services, including frontend development, full-stack solutions, UI/UX design, and responsive web design, tailored to meet the unique needs of various industries. We ensure seamless functionality, high performance, and an engaging user experience, delivering impactful results for your business.
       </p>
       
       <div className="grid-container">
-        <div className="text-content">
+        <div className="text-content"data-aos="fade-up" data-aos-duration="1000">
           <p>
-            <strong style={{color:"#263F6E", fontSize:"1.8rem"}}>Website Development</strong>
+            <strong style={{color:"white", fontSize:"1.8rem"}}>Website Development</strong>
             <br />
             Our developers create dynamic, user-friendly websites with responsive design, seamless navigation, and optimized performance, ensuring an engaging and smooth user experience.
           </p>
           <p>
-            <strong style={{color:"#263F6E", fontSize:"1.8rem"}} >Website Visualization</strong>
+            <strong style={{color:"white", fontSize:"1.8rem"}} >Website Visualization</strong>
             <br />
             Showcase your brand with high-quality, visually appealing websites, enabling clients to experience every feature, design element, and functionality before launch.
           </p>
           <p>
-            <strong style={{color:"#263F6E", fontSize:"1.8rem"}}>Website Creation</strong>
+            <strong style={{color:"white", fontSize:"1.8rem"}}>Website Creation</strong>
             <br />
             Our website development services deliver custom-built, responsive websites, enabling businesses to present their ideas effectively and engage their audience with a seamless, interactive experience.
           </p>
         </div>
         
-        <div className="image-content">
+        <div className="image-content"data-aos="fade-up" data-aos-duration="1000">
           <img src="websitesolution.jpg" alt="3D Animation" className="responsive-img" />
         </div>
       </div>
@@ -99,15 +99,15 @@ const WebsiteSolutions = () => {
  {/* portion 4........... */}
 
  <div className="why-choose-container">
-      <h1 className="why-choose-title">
+      <h1 className="why-choose-title"data-aos="fade-up" data-aos-duration="1000">
       Why Choose CraftHive Solutions for Website Solutions?
       </h1>
-      <p className="why-choose-description">
+      <p className="why-choose-description"data-aos="fade-up" data-aos-duration="1000">
       By choosing CraftHive Solutions, you ensure high-quality, innovative website solutions that enhance user experience, improve functionality, and drive business growth with seamless design and performance.
       </p>
 
       <div className="why-choose-grid">
-        <div className="why-choose-box">
+        <div className="why-choose-box"data-aos="fade-up" data-aos-duration="1000">
           <FaTools className="why-choose-icon" />
           <h4>Expertise and Experience</h4>
           <p>
@@ -115,7 +115,7 @@ const WebsiteSolutions = () => {
           </p>
         </div>
 
-        <div className="why-choose-box">
+        <div className="why-choose-box"data-aos="fade-up" data-aos-duration="1000">
           <FaClipboardCheck className="why-choose-icon" />
           <h4>Comprehensive Services</h4>
           <p>
@@ -123,7 +123,7 @@ const WebsiteSolutions = () => {
           </p>
         </div>
 
-        <div className="why-choose-box">
+        <div className="why-choose-box"data-aos="fade-up" data-aos-duration="1000">
           <FaHeadset className="why-choose-icon" />
           <h4>24/7 Support</h4>
           <p>
@@ -131,7 +131,7 @@ const WebsiteSolutions = () => {
           </p>
         </div>
 
-        <div className="why-choose-box">
+        <div className="why-choose-box"data-aos="fade-up" data-aos-duration="1000">
           <FaCogs className="why-choose-icon" />
           <h4>Customized Solutions</h4>
           <p>
